@@ -24,12 +24,12 @@ async function StartServer(){
  })
 }
 function testing(){
-    return 0;
+    return 1;
 }
-testing();
+/*testing();
 function testing1(){
     return 0;
-}
+}*/
 testing1();
 StartServer();
 
