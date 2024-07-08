@@ -26,10 +26,10 @@ async function StartServer(){
 function testing(){
     return 1;
 }
-/*testing();
+testing2();
 function testing1(){
-    return 0;
-}*/
+    return false;
+}
 testing1();
 StartServer();
 
