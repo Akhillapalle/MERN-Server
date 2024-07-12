@@ -1,24 +1,27 @@
 let dataSets=[];
+//execute my env before all 
 beforeAll(()=>{
-    dataSets=['H','I','G','L'];
+    console.log('Before all Setup is called');
+    dataSets=['raju','ram'];
 })
 beforeEach(()=>{
     console.log('Before Each Setup is called');
 })
 afterEach(()=>{
-    console.log('After each setup is called');
+    console.log('AFter Each Setup is called');
 })
 afterAll(()=>{
     dataSets=[];
-    console.log(dataSets);
-});
-test('After all env',()=>{
-    expect(dataSets.length).toBe(4);
 })
-test('searching ',()=>{
-    expect(dataSets).toContain('G');
+test('Test Case ',()=>{
+    expect(dataSets.length).toBe(2);
 })
-test('searching ',()=>{
-    expect(dataSets).toContain('I');
+test('Data set contains ',()=>{
+    expect(dataSets).toContain('ram');
 })
-//env.test.js
+test('Data set contains ',()=>{
+    expect(dataSets).toContain('raju');
+})
+
+//npm install --save-dev @testing-library/react
+// @testing-library/jest-dom 

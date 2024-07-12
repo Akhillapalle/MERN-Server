@@ -1,33 +1,37 @@
-const sum= require('./test/sum')
-//test cases
-test('fun should return 2',()=>{
-    expect(sum(1,2)).toBe(2);
+//test cases for our unit fun sum
+const sum = require('./test/sum')
+
+//jest test cases
+//test function to test
+test('fun should return 3',()=>{
+    expect(sum(1,2)).toBe(3);
+    //toBe()->exactly equal 
+    //expect()->to ex our unit 
 })
-//toEqual
-test('Object in array', ()=>{
-    const data={one:1}
-    data['two']=2;
-    expect(data).toEqual({one:1,two:2});
-})
-//toBeNull
-test('Value is NUll',()=>{
-    const a =null;
-    expect(a).toBeNull();
-})
-//toBeDefined: define or not
-test('Value is defined',()=>{
-    const aa=1;
-    expect(aa).toBeDefined();
-})
-//toBeTruthy: recieved value should be true
-test('Value is Truth',()=>{
-    const bool1=true
-    expect(bool1).toBeTruthy();
-})
-//toBeFalsy : recieved value must be false
-test('Value is False',()=>{
-    const bool=false
-    expect(bool).toBeFalsy();
+//run 'npm test' under server folder
+test('Object in array',()=>{
+    const data ={one:1}
+    data['two']=6;
+    expect(data).toEqual({one:1, two:6});
 })
 
-//sum.test.js
+//toBeNull -> if the recived value is NULL 
+test('Value is Null',()=>{
+    const n=null;
+    expect(n).toBeNull();
+})
+//toBeDefined -> if a value/variable is defined or not 
+test('Url is Defined',()=>{
+    const url ='sdysdhsd@mongodburl';
+    expect(url).toBeDefined();
+})
+//teBeTruthy -> received value should be truth
+test('Value is True',()=>{
+    const bool = true
+    expect(bool).toBeTruthy();
+})
+//toBeFalsy 
+test('Value is false',()=>{
+    const bool = false
+    expect(bool).toBeFalsy();
+})
