@@ -8,7 +8,7 @@ const userApiFromRouter =
 require('./routes/userRoutes') //import
 const app = express() 
 const port = 3001;
-const url= 'mongodb+srv://palleakhila:<password>@cluster0.gh89e8j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const url= 'mongodb+srv://palleakhila:TubQRUGxpLnMuvIG@cluster0.gh89e8j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 app.use(express.json())
 app.use(cors()) //using cors
