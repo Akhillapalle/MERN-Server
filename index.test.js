@@ -1,3 +1,14 @@
+const add=require('./index');
+test('add 1+2 to 3',()=>{
+    expect(add(1,2)).toBe(3)
+})
+test('add -1+-1 to -2',()=>{
+    expect(add(-1,-1)).toBe(-2)
+})
+test('add 1+4 to 5',()=>{
+    expect(add(1,4)).toBe(5)
+})
+
 /*const express = require('express');
 const mongoose = require('mongoose');
 const {ApolloServer,gql} = require('apollo-server-express');
@@ -19,15 +30,29 @@ app.use('/users',userApiFromRouter); //api
 async function StartServer(){
  await server.start();
  server.applyMiddleware({app});//run my express code
- app.listen(port,()=>{
- console.log('server live 3001');
- })
-}*/
-function add(a,b){
-    return a+b;
+ //app.listen(port,()=>{
+ //console.log('server live 3001');
+ //})
 }
-//StartServer();
-module.exports=add;
+beforeAll(async ()=>{
+    await StartServer();
+})
+
+test('GrapgQL Server started and running',async()=>{
+    const res=await request(app)
+    .post('/graphql').send({
+        query:`
+        _schema{
+            queryType{
+                name
+            }
+        }
+    `
+    })
+    expect(res.statusCode).toBe(200)
+    expect(res.body.data._.schema.queryType.name).toBe('query')
+})*/
+
 
 
 /*const express = require('express');
