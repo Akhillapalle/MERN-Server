@@ -1,9 +1,12 @@
-const {getData,getRaw}=require('./utils');
+//test/processData.js
+const {getData,getRaw} = require('./utils');
+
 function processData(){
-    return Processed:${getData};
+    return `Processed:${getData()}`;
+    //Processed real data;
 }
 function processRaw(){
     return getRaw();
 }
+
 module.exports={processData,processRaw};
-//processData.js

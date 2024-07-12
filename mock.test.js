@@ -21,4 +21,3 @@ test('Mocked Raw Data',()=>{
     getRaw.mockReturnValue(true);
     expect(processRaw()).toBe(true);
 })
-//mock.test.js

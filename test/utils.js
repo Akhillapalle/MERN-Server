@@ -1,8 +1,9 @@
+//test/utils.js
+//fetching and return the data 
 function getData(){
-    return 'real data'
+    return 'real data';
 }
 function getRaw(){
     return false;
 }
 module.exports={getData,getRaw};
-//utils.js
